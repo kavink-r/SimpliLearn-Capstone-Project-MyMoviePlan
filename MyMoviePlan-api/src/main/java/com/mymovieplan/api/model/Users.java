@@ -17,9 +17,12 @@ public class Users {
 	private String email;
 	private String password;
 	private String country;
+	
+	
 	public Users() {
 		// TODO Auto-generated constructor stub
 	}
+	
 	public int getUid() {
 		return Uid;
 	}
