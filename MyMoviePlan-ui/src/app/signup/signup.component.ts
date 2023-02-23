@@ -14,14 +14,11 @@ export class SignupComponent {
   user:user =new user();
   password:string;
   confirmpassword:string;
-  file: File;
+  
  constructor(private userService:UserService,private router:Router){
 
 }
-onChange(event:any) {
-  this.file = event.target.files[0];
-  
-}
+
 
 onSubmit(){
   let saved:boolean=false;

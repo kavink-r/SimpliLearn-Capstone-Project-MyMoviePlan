@@ -9,6 +9,10 @@ import { DetailsComponent } from './details/details.component';
 import { SignupComponent } from './signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateuserComponent } from './updateuser/updateuser.component';
+import { MovielistComponent } from './movielist/movielist.component';
+import { CartComponent } from './cart/cart.component';
+import { AddmovieComponent } from './addmovie/addmovie.component';
+
 
 
 @NgModule({
@@ -18,7 +22,11 @@ import { UpdateuserComponent } from './updateuser/updateuser.component';
     UserlistComponent,
     DetailsComponent,
     SignupComponent,
-    UpdateuserComponent
+    UpdateuserComponent,
+    MovielistComponent,
+    CartComponent,
+    AddmovieComponent
+   
     
   ],
   imports: [

@@ -15,7 +15,7 @@ public class movie {
 		private String title;
 		private String genre;
 		private float rating;
-		private Date releasedate;
+		private Date releaseDate;
 		private boolean status;
 		private List<String> actors;
 		private double runtime;
@@ -55,11 +55,11 @@ public class movie {
 		
 
 		public Date getReleasedate() {
-			return releasedate;
+			return releaseDate;
 		}
 
 		public void setReleasedate(Date releasedate) {
-			this.releasedate = releasedate;
+			this.releaseDate = releasedate;
 		}
 
 		public boolean isStatus() {
@@ -128,7 +128,7 @@ public class movie {
 		@Override
 		public String toString() {
 			return "movie [movieId=" + movieId + ", title=" + title + ", genre=" + genre + ", rating=" + rating
-					+ ", releasedate=" + releasedate + ", status=" + status + ", actors=" + actors + ", runtime="
+					+ ", releasedate=" + releaseDate + ", status=" + status + ", actors=" + actors + ", runtime="
 					+ runtime + ", language=" + language + ", imageUrl=" + imageUrl + ", director=" + director
 					+ ", moviePrice=" + moviePrice + "]";
 		}
