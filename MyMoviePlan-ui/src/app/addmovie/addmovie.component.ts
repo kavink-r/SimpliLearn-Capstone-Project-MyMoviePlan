@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -12,7 +13,7 @@ import { MovieService } from 'src/service/movie.service';
 export class AddmovieComponent {
   movie:movie = new movie();
   actortemp:string="";
-  constructor(private mvservice:MovieService, private router:Router){}
+  constructor(private mvservice:MovieService, private location:Location){}
   ngOnInit(){
     this.movie.actors=[];
   }
@@ -25,7 +26,6 @@ export class AddmovieComponent {
   }
   saveMovie(){
     this.mvservice.addMovie(this.movie).subscribe(res=>console.log(res));
-    this.router.navigateByUrl("/");
-
+    this.location.back();
   }
 }

@@ -12,6 +12,16 @@ import { UpdateuserComponent } from './updateuser/updateuser.component';
 import { MovielistComponent } from './movielist/movielist.component';
 import { CartComponent } from './cart/cart.component';
 import { AddmovieComponent } from './addmovie/addmovie.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { BookingdetailsComponent } from './bookingdetails/bookingdetails.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { AdminpanelComponent } from './adminpanel/adminpanel.component';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
+import { MoviemasterComponent } from './moviemaster/moviemaster.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { UserloginComponent } from './userlogin/userlogin.component';
+import { UserdashboardComponent } from './userdashboard/userdashboard.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -25,7 +35,16 @@ import { AddmovieComponent } from './addmovie/addmovie.component';
     UpdateuserComponent,
     MovielistComponent,
     CartComponent,
-    AddmovieComponent
+    AddmovieComponent,
+    CheckoutComponent,
+    BookingdetailsComponent,
+    AdminloginComponent,
+    AdminpanelComponent,
+    ForbiddenComponent,
+    MoviemasterComponent,
+    UserloginComponent,
+    UserdashboardComponent,
+    NavbarComponent
    
     
   ],
@@ -33,7 +52,8 @@ import { AddmovieComponent } from './addmovie/addmovie.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

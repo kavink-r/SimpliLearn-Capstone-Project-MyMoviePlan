@@ -8,7 +8,7 @@ import { status } from 'src/model/status';
   providedIn: 'root'
 })
 export class MovieService {
-  baseURL:string='http://192.168.1.10:8080/api/movie';
+  baseURL:string='http://localhost:8080/api/movie';
   constructor(private http:HttpClient) { }
 
   getAllMovies():Observable<movie[]>{
@@ -19,5 +19,8 @@ export class MovieService {
   }
   getMovieById(id:number):Observable<movie>{
     return this.http.get<movie>(this.baseURL+"/find/"+id);
+  }
+  changestatus(mv:movie):Observable<status>{
+    return this.http.patch<status>(this.baseURL+"/statusChange",mv);    
   }
 }

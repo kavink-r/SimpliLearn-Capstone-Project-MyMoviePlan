@@ -7,6 +7,8 @@ export class Cart{
     let totalprice:number = 0;
         this.items.forEach(item=>{totalprice+=item.price});
         return totalprice;
+        
     }
+    
 
 }

@@ -16,11 +16,10 @@ export class MovielistComponent {
   ngOnInit(){
     this.movieService.getAllMovies().subscribe(data=>{
       this.movies = data;
-      console.log("data:")
-      console.log(data);
+      this.movies=this.movies.filter(x=>x.status);
     });
-    console.log("movies:")
-    console.log(this.movies);  
+    
+    
   }
 
   click(movieId:number){

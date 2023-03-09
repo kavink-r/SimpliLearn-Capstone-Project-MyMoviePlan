@@ -47,6 +47,7 @@ public class adminService {
 			}
 
 		}
+		System.out.println(result);
 		return result;
 	}
 	public Map<String, String> AuthenticateByEmail(administrators usr) {

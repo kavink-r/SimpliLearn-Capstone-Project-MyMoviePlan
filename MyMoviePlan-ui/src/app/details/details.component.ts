@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { user } from 'src/model/user';
 import { UserService } from 'src/service/user.service';
 
@@ -10,10 +10,16 @@ import { UserService } from 'src/service/user.service';
 })
 export class DetailsComponent {
   user:user;
-  constructor(private usrService:UserService, private route:ActivatedRoute){}
+  constructor(private usrService:UserService, private route:ActivatedRoute, private router:Router){}
   ngOnInit(){
     
     const username = this.route.snapshot.paramMap.get('usrname');
     this.usrService.getUserByName(String(username)).subscribe(data=>this.user=data);
+  }
+  navigateToUserlist(){
+    this.router.navigate(['/adminpanel/userlist']);
+  }
+  navigateToUpdate(param:string){
+    this.router.navigate(['/adminpanel/update',param])
   }
 }

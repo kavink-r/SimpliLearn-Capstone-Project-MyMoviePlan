@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.mymovieplan.api.model.administrators;
 import com.mymovieplan.api.service.adminService;
 
+@CrossOrigin(allowedHeaders = "*")
 @RestController
 @RequestMapping("/api/admin")
 public class adminController {
@@ -58,7 +60,9 @@ public class adminController {
 			return service.AuthenticateByUsername(usr);
 		}
 		
-		result.put("status", "Bad request");
+		result.put("admin", "Bad request");
+		result.put("authentication", "Bad request");
+		
 		return result;
 	}
 	

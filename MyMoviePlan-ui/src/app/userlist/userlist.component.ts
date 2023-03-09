@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { status } from 'src/model/status';
 import { user } from 'src/model/user';
 import { UserService } from 'src/service/user.service';
@@ -10,7 +11,7 @@ import { UserService } from 'src/service/user.service';
 })
 export class UserlistComponent {
   users: user[];
-  constructor(private usrService: UserService) {
+  constructor(private usrService: UserService, private router:Router) {
 
   }
 
@@ -27,5 +28,11 @@ export class UserlistComponent {
     });
 
 
+  }
+  navigateToDetails(param:string){
+    this.router.navigate(['/adminpanel/details',param]);
+  }
+  navigateToUpdate(param:string){
+    this.router.navigate(['adminpanel/update',param])
   }
 }

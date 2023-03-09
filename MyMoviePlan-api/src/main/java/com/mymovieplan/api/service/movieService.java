@@ -43,7 +43,7 @@ public class movieService {
 		public Map<String,String> updateMovie(movie mv){
 			Map<String,String> status = new HashMap<>();
 			movie mv1 = repo.findById(mv.getMovieId()).get();
-			mv1.setMovieId(mv.getMovieId());
+			
 			if(mv.getTitle()==null) {
 				mv.setTitle(mv1.getTitle());
 			}
@@ -56,7 +56,7 @@ public class movieService {
 			if(mv.getReleasedate()==null) {
 				mv.setReleasedate(mv1.getReleasedate());
 			}
-			mv.setStatus(mv1.isStatus());
+			//mv.setStatus(mv1.isStatus());
 			if(mv.getActors()==null) {
 				mv.setActors(mv1.getActors());
 			}

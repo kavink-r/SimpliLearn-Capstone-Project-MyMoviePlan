@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Cart } from 'src/model/cart';
+import { cartitem } from 'src/model/cartitem';
 import { CartService } from 'src/service/cart.service';
 
 @Component({
@@ -12,5 +13,8 @@ export class CartComponent {
   constructor(private cartservice:CartService){}
   ngOnInit(){
     this.cart = this.cartservice.getCart();
+  }
+  removefromcart(itm:cartitem){
+    this.cartservice.removeFromCart(itm.movie.movieId);
   }
 }

@@ -22,8 +22,8 @@
         <td class="text-center">
             <div class="btn-group" role="group">
             <button class="btn btn-danger" (click)="deleteUser(user.uid)"><i class="bi bi-trash"></i></button>
-            <button class="btn btn-warning" routerLink="/details/{{user.userName}}"><i class="bi bi-eye"></i></button>
-            <button class="btn btn-success" routerLink="/update/{{user.userName}}">  <i class="bi bi-pencil-square"></i></button>
+            <button class="btn btn-warning" (click)="navigateToDetails(user.userName)"><i class="bi bi-eye"></i></button>
+            <button class="btn btn-success" (click)="navigateToUpdate(user.userName)">  <i class="bi bi-pencil-square"></i></button>
         </div>
         </td>
     </tr>
