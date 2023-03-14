@@ -12,6 +12,16 @@ import { UserService } from './user.service';
 export class LoginService {
 
   currentuser:string="0";
+  curntuser:user={
+    "uid":-1,
+      "firstName":"",
+      "middleName":"",
+      "lastName":"",
+      "userName":"",
+      "email":"",
+      "password":"",
+      "country":""
+  };
   baseUrl:string='http://localhost:8080/api/admin';
   userauthstatus:boolean = false;
   adminauthstatus:boolean=false;
@@ -45,7 +55,7 @@ export class LoginService {
   async authUser(user:user):Promise<{"user":string,"authentication":string}>{
     const re=/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     var usr:user = {
-      "uid":0,
+      "uid":-1,
       "firstName":"",
       "middleName":"",
       "lastName":"",
@@ -69,6 +79,8 @@ export class LoginService {
         userauthstatus.authentication="1"
         this.currentuser=usr.firstName+' '+usr.lastName;
         this.userauthstatus=true;
+        this.curntuser=usr;
+        
       }else{
         userauthstatus.authentication="0"
       }
@@ -80,10 +92,23 @@ export class LoginService {
   getCurrentUser():string{
     return this.currentuser;
   }
+  getCurrentUsr():user{
+    return this.curntuser;
+  }
   logout(){
     this.userauthstatus=false;
     this.adminauthstatus=false;
     this.currentuser="0";
+    this.curntuser ={
+      "uid":-1,
+      "firstName":"",
+      "middleName":"",
+      "lastName":"",
+      "userName":"",
+      "email":"",
+      "password":"",
+      "country":""
+    };
     alert('Logout Successful')
   }
     

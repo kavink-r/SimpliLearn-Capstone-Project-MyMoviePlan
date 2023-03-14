@@ -48,7 +48,7 @@ export class UpdateuserComponent {
       }
     }
    }
-   navigateToUserlist(){
-    this.router.navigate(['adminpanel/userlist']);
+   cancel(){
+    this.location.back();
    }
 }

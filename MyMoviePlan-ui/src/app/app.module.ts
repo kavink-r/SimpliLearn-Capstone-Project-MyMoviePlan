@@ -22,6 +22,9 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ViewuserbookingsComponent } from './viewuserbookings/viewuserbookings.component';
+import { ChangeuserpasswordComponent } from './changeuserpassword/changeuserpassword.component';
+import { BookingsmasterComponent } from './bookingsmaster/bookingsmaster.component';
 
 
 
@@ -44,7 +47,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     MoviemasterComponent,
     UserloginComponent,
     UserdashboardComponent,
-    NavbarComponent
+    NavbarComponent,
+    ViewuserbookingsComponent,
+    ChangeuserpasswordComponent,
+    BookingsmasterComponent
    
     
   ],
